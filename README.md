@@ -1,18 +1,20 @@
 # figwheel pushstate server
 
-To use, add the following two forms to `project.clj`:
+Just a simple ring handler to have [figwheel's](https://github.com/bhauman/lein-figwheel) dev server nicely handle pushState routes.
 
--  `figwheel-server.core/handler` as the `:ring-handler` in `:figwheel`:
+To use, add the following to `project.clj`:
+
+- `[figwheel-pushstate-server "0.1.0"]` to dependencies (or :dev dependencies, as shown here):
+
+```clj
+:profiles {:dev {:dependencies [[figwheel-pushstate-server "0.1.0"]]}}            
+```
+
+-  `figwheel-server.core/handler` as the `:ring-handler` for `:figwheel`:
 
 ```clj
 :figwheel {:ring-handler figwheel-server.core/handler}
 
-```
-
-- `[figwheel-pushstate-server "0.1.0"]` to dev dependencies:
-
-```clj
-:profiles {:dev {:dependencies [[figwheel-pushstate-server "0.1.0"]]}}            
 ```
 
 Now, request paths that are not found as files in `resources/public` will be redirected to `index.html`.
