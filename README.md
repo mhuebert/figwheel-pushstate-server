@@ -2,15 +2,13 @@
 
 Just a simple ring handler to have [figwheel's](https://github.com/bhauman/lein-figwheel) dev server nicely handle pushState routes.
 
-To use, add the following to `project.clj`:
-
-- `[figwheel-pushstate-server "0.1.0"]` to dependencies (or :dev dependencies, as shown here):
+To use, add `[figwheel-pushstate-server "0.1.0"]` to dependencies (or :dev dependencies, as shown here) in your project.clj:
 
 ```clj
 :profiles {:dev {:dependencies [[figwheel-pushstate-server "0.1.0"]]}}            
 ```
 
--  `figwheel-server.core/handler` as the `:ring-handler` for `:figwheel`:
+and add  `figwheel-server.core/handler` as the `:ring-handler` in your :figwheel options:
 
 ```clj
 :figwheel {:ring-handler figwheel-server.core/handler}
