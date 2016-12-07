@@ -17,7 +17,7 @@ To use, add the following to `project.clj`:
 
 ```
 
-Now, request paths that are not found as files in `resources/public` will be redirected to `index.html`.
+Requested paths that do not resolve to files in `resources/public` will fall back to `index.html`.
 
 (based on Kenneth Kalmer's [blog post](https://opensourcery.co.za/2016/05/27/smooth-client-side-routing-in-a-figwheel-only-project/) which was, in turn, inspired by Arne Brasseur's [chestnut](https://github.com/plexus/chestnut).)
  
