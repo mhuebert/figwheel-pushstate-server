@@ -1,4 +1,4 @@
-(defproject figwheel-pushstate-server "0.1.1"
+(defproject figwheel-pushstate-server "0.1.1-SNAPSHOT"
   :description "Figwheel ring handler to support pushstate routes"
   :url "https://github.com/mhuebert/figwheel-pushstate-server"
   :license "MIT"
