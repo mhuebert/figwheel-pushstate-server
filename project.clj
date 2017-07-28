@@ -5,4 +5,5 @@
   :dependencies [[ring "1.4.0"]
                  [ring/ring-defaults "0.2.0"]
                  [compojure "1.5.0"]]
+  :deploy-via :clojars
   :src-paths ["src"])
